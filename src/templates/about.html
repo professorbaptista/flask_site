@@ -1,0 +1,186 @@
+
+{% extends 'template.html' %}
+{% block content %}
+
+    <!-- Titulo principal -->
+    <main >
+        <div class="main-title">
+            <h2>Sobre <span>mim </span><span class="big-text">Minha Estatística</span></h2>
+        </div>
+
+       <!-- Lado esquerdo da pagina sobre. Informaçoes pessoais -->
+       <section>
+            <div class="about-container">
+                <div class="left-about">
+                    <h4>Informações sobre mim</h4>
+                    <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima dolore quas tenetur cumque! Eligendi ex, et labore nesciunt sapiente dignissimos culpa illum expedita! At culpa iusto sunt voluptates nulla?
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat itaque enim non laborum! Reprehenderit eum fugiat iusto, ratione vero temporibus amet obcaecati, cupiditate est quod corrupti tempore, modi mollitia officiis.
+                    </p>
+                    <div class="btn-con">
+                        <a href="#" class="main-btn">
+                            <span class="btn-text">Download my CV</span>
+                            <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="Botão">
+                        </a>
+                    </div>
+                </div>
+    
+                <!-- Lado direito da pagina sobre. trabalhos feitos  -->
+                <div class="right-about">
+                    <!-- Primeiro card -->
+                    <div class="about-item">
+                            <div class="abt-text">
+                                <p class="large-text">40 + </p>
+                                <p class="small-text">
+                                Projectos <br>Completados</p>
+                            </div>
+                    </div>
+                    <!-- segundo card -->
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">2 + </p>
+                            <p class="small-text">
+                            anos de <br>Experiencia</p>
+                        </div>
+                    </div>
+
+                    <!-- Terceiro card -->
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">90 + </p>
+                            <p class="small-text">
+                            clientes <br>satisfeitos</p>
+                        </div>
+                    </div>
+
+                    <!-- Quarto card -->
+                    <div class="about-item">
+                        <div class="abt-text">
+                            <p class="large-text">70 + </p>
+                            <p class="small-text">
+                            clientes <br></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Estatisticas -->
+
+            <div class="about-stats">
+                  <!-- Minhas habilidades -->
+                  <h4 class="stats-title">Minhas habilidades</h4>
+               <!-- primeira div -->
+                <div class="progress-bars">
+                
+                <!-- Card para habilidades html depois copiar o card para outras habilidades -->
+                    <div class="progress-bar">
+                        <p class="prog-title">Html5</p>
+                        <div class="progress-con">
+                            <p class="progress-text">90%</p>
+                            <div class="progress">
+                                <span class="html"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">css</p>
+                        <div class="progress-con">
+                            <p class="progress-text">85%</p>
+                            <div class="progress">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">javascript</p>
+                        <div class="progress-con">
+                            <p class="progress-text">70%</p>
+                            <div class="progress">
+                                <span class="js"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <p class="prog-title">react</p>
+                        <div class="progress-con">
+                            <p class="progress-text">75%</p>
+                            <div class="progress">
+                                <span class="react"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">Node.js</p>
+                        <div class="progress-con">
+                            <p class="progress-text">60%</p>
+                            <div class="progress">
+                                <span class="node"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">python</p>
+                        <div class="progress-con">
+                            <p class="progress-text">70%</p>
+                            <div class="progress">
+                                <span class="python"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">flask</p>
+                        <div class="progress-con">
+                            <p class="progress-text">65%</p>
+                            <div class="progress">
+                                <span class="flask"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <p class="prog-title">github</p>
+                        <div class="progress-con">
+                            <p class="progress-text">68%</p>
+                            <div class="progress">
+                                <span class="github"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <h4 class="stats-title">Minha linha de tempo</h4>
+                 <!-- segunda div -->
+                <div class="timeline">
+                  <!-- Minha linha de tempo/Timeline -->
+                    <div class="timeline-item">
+                        <div class="timeline-icon" onmouseover="mudar()">
+                            <img class="btn-icon" src="{{ url_for('static', filename='images/briefcase.png') }}" alt="pasta">
+                        </div>
+                        <p onmouseover="mudar ()"
+                        
+                        class="timeline-duration" id="mudar" >DE 2020 - 2022</p>
+                    <h4 class="developer">Desenvolvidor web <span>front-end</span></h4>
+                    <span></span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab nisi similique ut neque, deleniti pariatur repudiandae assumenda, at odit sint est. Debitis dicta eveniet accusamus fugiat expedita nihil 
+                    </p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-icon">
+                            <img class="btn-icon" src="{{ url_for('static', filename='images/briefcase.png') }}" alt="pasta">
+                        </div>
+                        <p onmouseover="mudarTexto()"  class="timeline-duration" id="timeline-duration">DE 2022 - Presente</p>
+                    <h4 class="developer">Desenvolvidor web <span>Full-stack</span></h4>
+                    <span></span>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab nisi similique ut neque, deleniti pariatur repudiandae assumenda, at odit sint est. Debitis dicta eveniet accusamus fugiat expedita nihil 
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </main>
+
+{% endblock %}

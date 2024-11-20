@@ -1,0 +1,136 @@
+
+{% extends 'template.html' %}
+{% block content %}
+
+<section>
+   <div class="main-title portfolio" >
+      <h2>meu <span>Portfolio </span><span class="big-text porto-text">meus trabalhos</span></h2>
+   </div>
+   <p class="port-text">Aqui estão alguns dos trabalhos desenvolvidos ao longo deste tempo</p>
+   <div class="portfolios">
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portB.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('index') }}" target="_blank">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div> 
+         </div>
+      </div>
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portC.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portF.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('index') }}" target="_blank">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portE.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div>  
+         </div>
+      </div>
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portA.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div> 
+         </div>
+      </div>
+      <div class="portfolio-item">
+         <div class="image">
+            <img src="{{ url_for('static', filename='images/portB.webp' ) }}" alt="image">
+         </div>
+
+         <div class="hover-item">
+            <h3>Fonte do projeto</h3>
+            <div class="icons">
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
+               </a>
+               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+                  <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
+               </a>
+            </div> 
+         </div>
+      </div>
+   </div>
+   
+  
+</section>
+
+{% endblock %}

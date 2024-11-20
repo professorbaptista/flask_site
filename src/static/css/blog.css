@@ -1,0 +1,92 @@
+
+/* Estilização da pagina blogue  */
+.main-title h2{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700px;
+    margin: 2rem;
+    color: var(--color-grey1);
+  }
+
+  .blogs{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 2rem; */
+    
+    .blog{
+      position: relative;
+      background-color: var(--color-forth);
+      border-radius: 5px;
+      box-shadow: 1px 1px 20px rgb(0, 0, 0, 0.1);
+      transition: all .4s ease-in-out;
+      margin: 0 0 5rem 3rem;
+      
+
+      &:hover{
+        box-shadow: 1px 1px 20px rgb(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        img{
+          filter: grayscale(0);
+          transform: scale(1.1);
+        }
+
+      }
+    }
+    img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      filter: grayscale(100%);
+      transition: all .4s ease-in-out;
+    }
+
+    .blog-text{
+      margin-top: -4px;
+      padding: 1.1rem;
+      border-top: 8px solid var(--color-secondary);
+    }
+
+    .blog-text h4{
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-grey1);
+      margin-bottom: .8rem;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+      &:hover{
+        color: var(--color-secondary);
+      }
+      
+    }
+
+    .blog-text p{
+      line-height: 1.6rem;
+      color: var(--color-grey0);
+      padding-bottom: 1rem; 
+    }
+  }
+
+ 
+  @media screen and (max-width: 600px) {
+    .blogs{
+      grid-template-columns: 1fr;
+      gap: .3rem;
+    }    
+
+    .blog{
+      margin: 3rem 0 1rem 1rem;
+    }
+  }
+
+
+  @media screen and (min-width: 600px) and (max-width: 920px){
+    .blogs{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+  }
+   
+

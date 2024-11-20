@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página principal</title>
+</head>
+<body>
+
+{% extends 'template.html' %}
+{% block content %}
+    <div class="header-content">
+
+        <!-- Lado esquerdo -->
+        <div class="right-header">
+            <h1 class="name">
+              Olá, sou o <span>Jose Baptista.</span>
+                Um Desenvolvedor web  Full-Stack.
+            </h1>
+            
+            <p class="name-parag">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore nihil sunt ut expedita porro, sint aspernatur in deleniti, delectus magnam officia labore debitis optio, laudantium repellendus nobis ipsum dolorem soluta.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid maxime officiis ipsum voluptate vel, praesentium neque ducimus sed, excepturi placeat quod exercitationem. Veritatis perspiciatis provident sapiente voluptatibus. Accusamus, impedit quibusdam!
+            </p>
+            <div class="btn-con">
+                <a href="" class="main-btn">
+                    <span class="btn-text">Download my CV</span>
+                    <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="">
+                </a>
+            </div>
+        </div>
+           <!-- Lado direito -->
+        <div class="left-header">
+            <div class="h-shape"></div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/user.png') }}">
+            </div>
+        </div>   
+    </div>
+
+
+{% endblock %}
+</body>
+</html>

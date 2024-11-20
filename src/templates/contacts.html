@@ -1,0 +1,106 @@
+
+{% extends 'template.html' %}
+{% block content %}
+
+<section>
+   <div class="contact-container">
+      <div class="main-title">
+         <h2>Contacta - <span class="span-post">Me</span><span class="big-text">Meus Contactos</span></h2>
+      </div>
+
+      <div class="contact-contact-con">
+         <div class="left-contact">
+            <h4>Contacta-<span class="contact-text">me</span> aqui</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolorum, consequatur vero ipsam sed mollitia nobis provident laborum est sapiente quam inven</p>
+            <div class="contact-info">
+               <div class="contact-item">
+                  <div class="icon">
+                     <img src="{{ url_for('static', filename='images/localition2.jpg') }}" alt="">
+                     <span>Localização:</span>
+                  </div>
+                  <p>Luanda, Angola</p>
+               </div>
+               <div class="contact-item">
+                  <div class="icon">
+                     <img src="{{ url_for('static', filename='images/email_1.webp') }}" alt="">
+                     <span>Email:</span>
+                  </div>
+                  <p><span>josenzinga6@gmail.com</span></p>
+               </div>
+               <div class="contact-item">
+                  <div class="icon">
+                     <img src="{{ url_for('static', filename='images/education_2.webp') }}" alt="">
+                     <span>Educação:</span>
+                  </div>
+                  <p>Ûdemy, freeCodeCamp</p>
+               </div>
+               <div class="contact-item">
+                  <div class="icon">
+                     <img src="{{ url_for('static', filename='images/phone.png') }}" alt="">
+                     <span>Telefone:</span>
+                  </div>
+                  <p>+244951795214</p>
+               </div>
+               <div class="contact-item">
+                  <div class="icon">
+                     <img src="{{ url_for('static', filename='images/language_1.webp') }}" alt="">
+                     <span>Línguas faladas:</span>
+                  </div>
+                  <p>Português, Inglês, Francês</p>
+               </div>
+            </div>
+            <div class="contact-icons">
+               <div class="contact-icon">
+                  <a href="">
+                     <img src="{{ url_for('static', filename='images/facebook_1.webp') }}" alt="">
+                  </a>
+                  <a href="">
+                     <img src="{{ url_for('static', filename='images/github_1.webp') }}" alt="">
+                  </a>
+                  <a href="">
+                     <img src="{{ url_for('static', filename='images/whatsap_2a.webp') }}" alt="">
+                  </a>
+               </div>
+            </div>
+         </div>
+
+         <div class="right-contact">
+            <form action="/login" method="post" class="form-contact">
+               <p>Solicite o seu orçamento </p>
+               <div class="input-control input-one">
+                 
+                     <input id="input-zone" type="text" name="name" placeholder="Digite o seu nome..." required>
+                     <input  id="input-zone" type="email" name="email" placeholder="Digite o seu email..." required>
+             
+                  </div>
+                  <div class="input-control">
+                    
+                        <input id="input-zone" type="text" name="subject" placeholder="Descreve aqui o seu pedido..." required>
+                   
+                  </div>
+                  <div class="input-control">
+                      
+                           <textarea placeholder="Deixe uma mensagem" class="input-textarea">
+                           </textarea>
+                       
+                     <!-- </div> -->
+                        <div class="btn-submit">
+                           <input type="submit" value="Enviar">
+                        </div><br>
+                        <div class="btn-con">
+                           <a href="#" class="main-btn">
+                               <span class="btn-text">Download my CV</span>
+                               <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="Botão">
+                           </a>
+                       </div>
+                        
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</section>
+
+{% endblock %}
