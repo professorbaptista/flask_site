@@ -1,0 +1,48 @@
+
+{% extends 'template.html' %}
+{% block content %}
+
+<main>
+    <section>
+        <div class="admin-container">
+            <!-- templates/admin/dashboard.html -->
+            <h2>Painel do Administrador</h2>
+            <h2>Bem-vindo à área de administração</h2>
+            <p>Você está autenticado.</p>
+            <p>Total de contactos: {{ total_contactos }}</p>
+            <p>Total de depoimentos: {{ total_depoimentos }}</p>
+            
+            <canvas id="grafico" width="400" height="200">
+                
+            </canvas>
+            
+            <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <script>
+              const ctx = document.getElementById('grafico').getContext('2d');
+              const chart = new Chart(ctx, {
+              type: 'bar',
+              data: {
+                  labels: ['Contactos', 'Depoimentos'],
+                  datasets: [{
+                      label: 'Total de registros',
+                      data: [{{ total_contactos }}, {{ total_depoimentos }}],
+                      backgroundColor: ['#36A2EB', '#FF6384']
+                  }]
+              },
+              options: {
+                  responsive: true;
+                  scales: {
+                      y: {
+                          beginAtZero: true
+                      }
+                  }
+              }
+              });
+            </script> -->
+        </div>
+    </section>
+</main>
+
+
+
+{% endblock %}

@@ -95,9 +95,9 @@
       padding: 1.5rem .6rem;
       border-radius: 17px;
       transition: all .4s ease-in-out;
-      &:hover{
+      /* &:hover{
         border: 3px solid var(--color-grey4);
-      }
+      } */
      
       .input-control{
         margin: 1.1rem 0;
@@ -110,14 +110,14 @@
         padding: .8rem 1rem;
         outline: none;
         border: 0;
-        background-color: var(--color-grey4);
+        background-color: var(--color-grey1);
         width: 92%;
         color: var(--color-white);
         resize: none;
-        &:hover{
+        /* &:hover{
           background-color: var(--color-grey1);
           color: var(--color-white); 
-        }
+        } */
         } 
       }
       .input-one{
@@ -137,6 +137,18 @@
     }
     
   }
+
+    /* Depoimentos dos usuarios */
+  .depoimento{
+    color: var(--color-grey1);
+    border: 2px solid var(--color-forth);
+    padding: 5px;
+    border-radius: 7px;
+    &:hover{
+      background-color: var(--color-forth);
+    }
+  }
+
 
 
   @media screen and (max-width: 600px) {

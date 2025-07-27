@@ -1,0 +1,25 @@
+
+{% extends 'template.html' %}
+{% block content %}
+<main>
+      <div class="main-title">
+        <h2>Depoimentos<span></span><span class="big-text">Clientes satisfeitos</span></h2>
+    </div>
+    <section>
+        <div class="depoimento-containe">
+            <h3>Depoimentos dos clientes</h3>
+            <ul class="depoimento-cards">
+                {% for name, message, data in depoimentos %}
+                <div class="depoimento-card">
+                    <li><strong>{{ name }}</strong></li>
+                    <li>{{ data if data else 'Sem data' }}</li>
+                    <li>{{ message }}</li>
+                </div>
+                {% endfor %}
+            </ul>
+            
+        </div>
+    </section>
+</main>
+
+{% endblock %}

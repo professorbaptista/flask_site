@@ -10,36 +10,38 @@
     <script src="{{ url_for('static', filename='scripts/index.js') }}" defer></script>
 </head>
 <body>
-   
         
-        <div id="container">
-           
-            <div class="parte1">
-                <h1>Cuide da sua saúde</h1>
-                <p>Clique no botão para calcular o seu IMC  </p>
-                <button id="iniciar" onclick="go(1,2)">Iniciar</button>
-            </div>
-            <div class="parte2">
-                <h2>calculadora IMC</h2>
-                <hr>
-                <label for="peso">Peso:</label>
-                <input type="number" id="peso" placeholder="Digite o seu peso..."><br><br>
-                <label for="altura">Altura:</label>
-                <input type="number" id="altura" placeholder="Digite a sua altura" ><br><br>
-                <button onclick="validate()" onclick="go(2,3)">calcular</button>
-            </div>
-            <div class="final">
-                <h2 >Resultado</h2>
-                <hr>
-
-                <p  class="resultado"  >Resultado</p>
-                <button id="calcular-novamente" onclick="go(3,2)">Calcular novamente</button>
-                <button id="finalizar" onclick="go(3,1)">Finalizar</button>
-               
-                
-            </div>
-        </div>
-    </main>
+            <section>
+             
+                <div class="botao-voltar">
+                <a href="/portfolio">Voltar</a>
+                </div>
+                <div id="container">
+                    <h2>José Baptista | Desenvolvidor web</h2>
+                <div class="parte1">
+                    <h2>Cuide da sua saúde</h2>
+                    <p>Clique no botão para calcular o seu IMC  </p>
+                    <button id="iniciar" onclick="go(1,2)">Iniciar</button>
+                </div>
+                <div class="parte2">
+                    <h2>calculadora IMC</h2>
+                    <hr>
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" placeholder="Digite o seu peso..."><br><br>
+                    <label for="altura">Altura:</label>
+                    <input type="number" id="altura" placeholder="Digite a sua altura" ><br><br>
+                    <button onclick="validate()" onclick="go(2,3)">calcular</button>
+                </div>
+                <div class="final">
+                    <h2 >Resultado</h2>
+                    <hr>
+                    <p  class="resultado"  >Resultado</p>
+                    <button id="calcular-novamente" onclick="go(3,2)">Calcular novamente</button>
+                    <button id="finalizar" onclick="go(3,1)">Finalizar</button>
+                </div>
+                </div>
+            </section>
+    
 </body>
 
 </html>

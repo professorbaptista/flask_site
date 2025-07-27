@@ -1,5 +1,32 @@
 
-{% extends 'template.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artigos sobre desenvolvimento web, dicas de programação com python, flask, javascript e tendências tecnológicas.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="José Baptista">
+    <title>Blogue | José Baptista</title>
+     <meta property="og:title" content="Blogue | José Baptista">
+    <meta property="og:description" content="Conteúdos técnico de qualidade para quem quer aprender programação e desenvolvimento web.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://2Ntechnology.com">
+    <meta property="og:image" content="https://2Ntechnology.com/static/images/blog.png">
+
+    <script type="application/Id+json">
+      {
+         "@context": "https://schema.org",
+         "@type": "Blog",
+         "name": "Blog tecn por José Baptista",
+         "url": "https://2Ntechnology.com/blog",
+         "descroption": "Artigos sobre o desenvolvimento web, Python, javascript, Node.js, flask, APIs e melhores práticas de programação."
+
+      }
+    </script>
+</head>
+<body>
+   {% extends 'template.html' %}
 {% block content %}
 
 <section>
@@ -12,45 +39,47 @@
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
                <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <h4>Como criar um website responsivo</h4>
+               <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <h4>Saiba mais sobre Html e Css</h4>
+               <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <h4>Como criar um website com Python</h4>
+              <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <h4>O que deves saber sobre Javascript</h4>
+              <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident, unde id expedita quo eveniet cumque voluptates enim in.</p>
+               <h4>Aprende a programar do zero absoluto</h4>
+            <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>
       </div>
 </section>
 
 {% endblock %}
+</body>
+</html>

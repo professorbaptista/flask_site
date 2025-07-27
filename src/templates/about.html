@@ -1,5 +1,41 @@
 
-{% extends 'template.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça a trajetória de José Baptista: desenvolvedor web full stack com foco em python, flask APIs e soluções web robustas">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="José Baptista">
+    <title>Sobre mim | José Baptista</title>
+    <meta property="og:description" content="Desenvolvidor apaixonado por tecnologia, com experiência em back-end e front-end e soluções modernas">
+    <meta property="og:title" content="Sobre mim | José Baptista">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://2Ntechnology.com">
+    <meta property="og:image" content="https://2Ntechnology.com/static/images/jose.webp">
+
+      <script type="application/Id+json">
+        {  
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "José Baptista",
+        "url": "https://2Ntechnology.com/about",
+        "sameAs": [
+        "https://www.linkedin.com/in/josenzinga",
+        "https://www.github.com/professorbaptista",
+        ],
+        "jobTitle": "desenvolvedor web",
+        "workFor": {
+            "@type": "Organization",
+            "name": "freeLancer"
+        },
+
+        "description": "Sou um desenvolvidor full stack, especializado em python, flask, node.js, javascript e projectos moderno."
+    }
+      </script>
+</head>
+<body>
+    {% extends 'template.html' %}
 {% block content %}
 
     <!-- Titulo principal -->
@@ -13,12 +49,11 @@
             <div class="about-container">
                 <div class="left-about">
                     <h4>Informações sobre mim</h4>
-                    <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minima dolore quas tenetur cumque! Eligendi ex, et labore nesciunt sapiente dignissimos culpa illum expedita! At culpa iusto sunt voluptates nulla?
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat itaque enim non laborum! Reprehenderit eum fugiat iusto, ratione vero temporibus amet obcaecati, cupiditate est quod corrupti tempore, modi mollitia officiis.
-                    </p>
+                    <p>Olá, eu sou o José Baptista, professor, Psicólogo e desenvolvidor web.</p>
+                    <p>Minha caminhada no mundo de tecnologias começou e 2020, quando assistia uma série que gosto muito, o Havai força especial, e via alguns autores hachers fazerem coisas maravilhosas, no princício a ideia era, isto é coisa dos filmes, é montagem. Mas um dia, como diz o ditado, a curiosidade matou o gato, pesquisar na internet como ser hacker. porém desta vez a curiosidade não matou o gata, mas inspirou o gato. A resposta encontrada na minha pesquisa, foi, primeiro tem que aprender a programação.</p>
+                    <p>Desde aí comecei uma aventura nunca imaginada por por mim e descobri que para tal tinha que aprender linguages de programação, como html, css e javascript, python etc. Foi aí que comecei uma jornada imparável até se tornar um desenvolvidor web.</p>
                     <div class="btn-con">
-                        <a href="#" class="main-btn">
+                        <a href="{{ url_for('static', filename='livros/Meu web2 curriculum.pdf')}}" download="Meu web curriculum.pdf" type="aplication/pdf" class="main-btn">
                             <span class="btn-text">Download my CV</span>
                             <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="Botão">
                         </a>
@@ -76,7 +111,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">Html5</p>
                         <div class="progress-con">
-                            <p class="progress-text">90%</p>
+                            <p class="progress-text">92%</p>
                             <div class="progress">
                                 <span class="html"></span>
                             </div>
@@ -86,7 +121,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">css</p>
                         <div class="progress-con">
-                            <p class="progress-text">85%</p>
+                            <p class="progress-text">96%</p>
                             <div class="progress">
                                 <span class="css"></span>
                             </div>
@@ -96,7 +131,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">javascript</p>
                         <div class="progress-con">
-                            <p class="progress-text">70%</p>
+                            <p class="progress-text">98%</p>
                             <div class="progress">
                                 <span class="js"></span>
                             </div>
@@ -115,7 +150,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">Node.js</p>
                         <div class="progress-con">
-                            <p class="progress-text">60%</p>
+                            <p class="progress-text">80%</p>
                             <div class="progress">
                                 <span class="node"></span>
                             </div>
@@ -124,7 +159,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">python</p>
                         <div class="progress-con">
-                            <p class="progress-text">70%</p>
+                            <p class="progress-text">80%</p>
                             <div class="progress">
                                 <span class="python"></span>
                             </div>
@@ -133,7 +168,7 @@
                     <div class="progress-bar">
                         <p class="prog-title">flask</p>
                         <div class="progress-con">
-                            <p class="progress-text">65%</p>
+                            <p class="progress-text">75%</p>
                             <div class="progress">
                                 <span class="flask"></span>
                             </div>
@@ -163,9 +198,7 @@
                         class="timeline-duration" id="mudar" >DE 2020 - 2022</p>
                     <h4 class="developer">Desenvolvidor web <span>front-end</span></h4>
                     <span></span>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab nisi similique ut neque, deleniti pariatur repudiandae assumenda, at odit sint est. Debitis dicta eveniet accusamus fugiat expedita nihil 
-                    </p>
+                    <p>Foi um período de intensa aprendizagem e prática em diferentes linguagens, como Html:5, Css3, Javascript e Python. Foi um período dificil, porém de muita persistência, como se diz o cavalo que corre com gosto não se cansa, que consegui atingir o objectivo. Foi aí que comecei a trabalhar na empresa 2N Tecnology, primeiro como estagiário, depois passei a efetivo.</p>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-icon">
@@ -175,8 +208,9 @@
                     <h4 class="developer">Desenvolvidor web <span>Full-stack</span></h4>
                     <span></span>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla ab nisi similique ut neque, deleniti pariatur repudiandae assumenda, at odit sint est. Debitis dicta eveniet accusamus fugiat expedita nihil 
+                        Deste tempo para cá tem sido de crescimento exponêncial, tecnica e profissionalmente, o back-end trouxe um valor acrescido para a minha nova e aventureira carreira de engenheiro de softs. 
                     </p>
+                    <p>Neste período desenvolvi muitos trabalhos profissionais que aumentou, ainda mais as minhas capacidades e competencias em tecnologias</p>
                     </div>
                 </div>
             </div>
@@ -184,3 +218,5 @@
         </main>
 
 {% endblock %}
+</body>
+</html>

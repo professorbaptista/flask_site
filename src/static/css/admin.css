@@ -1,0 +1,17 @@
+.admin-container{
+    width: 760px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-block: 90px;
+
+    h2{
+        text-align: center;
+        margin: 30px 0 20px 0;
+        color: #ffe4c4;
+    }
+
+    p{
+        margin-bottom: 17px;
+        text-align: center;
+    }
+}

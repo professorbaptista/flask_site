@@ -26,6 +26,32 @@ body{
     
 }
 
+/* botão Voltar */
+
+section{
+    width: 510px;margin: 0 auto;
+    margin-top: 10px;
+}
+.botao-voltar{
+    position: absolute;
+    bottom: 4%;
+    left: 45%;
+   
+    a{
+        text-decoration: none;
+        border: 3px solid #cf0638;
+        padding: 6px 10px;
+        border-radius: 12px;
+        font-size: 1.2rem;
+        color: #f1f2f3;
+    &:hover{
+         background-color: #eb0a44;
+    }
+     
+        
+    }
+}
+
 #container{
     width: 600px;
     height: auto;
@@ -211,4 +237,22 @@ h2{
 
     }
 
+}
+
+@media screen and (max-width: 600px) {
+    h2{
+        font-size: 1rem;
+    }
+    .container{
+        width: 100%;
+    }
+
+    p{
+       font-size: .7rem;
+    }
+
+    button{
+        width: 26%;
+        font-size: 1rem;
+    }
 }

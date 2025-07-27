@@ -1,0 +1,78 @@
+
+.depoimento-container{
+    margin: 0 auto;
+    width: 460px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding-block: 90px;
+}
+.form-contact{
+      padding: 1.5rem .6rem;
+      border-radius: 17px;
+      transition: all .4s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      border: 3px solid var(--color-grey4);
+      /* &:hover{
+      
+      } */
+
+      label{
+        color: bisque;
+        font-weight: bold;
+      }
+     
+      .input-zone, textarea{
+        margin: 1.1rem 0;
+        border: none;
+        outline: none;
+        padding: 6px;
+        color: beige;
+        border-radius: 8px;
+        background-color: #333;
+      }}
+
+      .btn-submit{
+        background-color: #333;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        color: bisque;
+        font-size: 1.1rem;
+        &:hover{
+            background-color: beige;
+            color: #333;
+        }
+      }
+    
+
+
+  @media screen and (max-width: 600px) {
+
+    .depoimento-container{
+      width: 100%;
+    }
+    .contact-contact-con{
+     flex-direction: column;
+      padding-top: 1rem;
+      margin-left: 1rem;
+      .left-contact h4{
+        font-size: 1.8rem;
+        text-align: center;
+        color: var(--color-secondary);
+        .contact-text{
+          color: var(--color-forth);
+        }
+      }
+
+      .contact-icon{
+        margin-bottom: 1.5rem;
+      }
+    }   
+    
+    .form-contact{
+      padding-right: 3rem;
+    }
+  }
+  

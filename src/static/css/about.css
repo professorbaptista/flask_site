@@ -3,7 +3,8 @@
   /* Lado esquerdo do sobre. */
   .main-title{
     text-align: center;
-    margin: 4rem 0 4rem 0;
+    margin: 4rem 0 1rem 0;
+    padding-block: 90px;
     h2{
       position: relative;
       text-transform: uppercase;

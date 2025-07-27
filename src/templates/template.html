@@ -15,8 +15,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contacts.css') }}">
-    <!-- Link of media queries -->
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='madia/media.css') }}"> -->
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/depoimento.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/depoimentoDeixado.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactos_recebidos.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
 
   </head>
 <body class="main-content">
@@ -41,12 +50,31 @@
                         <a href="{{ url_for('blog') }}">Blogue</a>
                     </li>
                     <li>
+                        <a href="{{ url_for('depoimentoDeixado') }}">Depoimentos</a>
+                    </li>
+                    <li>
                         <a href="{{ url_for('contacts') }}">Contactos</a>
                     </li>
-                  
-                    
+
+                    {% if session.get('autenticado') %}
+                    <li><a href="{{ url_for( 'admin' )}}">Admin</a></li>
+                    <li><a href="{{ url_for('logout') }}">Sair</a></li>
+
+                    <li><a href="{{ url_for('contactos_recebidos') }}">Contactos</a></li>
+                    {% else %}
+                    <li><a href="{{ url_for('login') }}">Admin</a></li>
+                    {% endif %}
                 </ul>
             </nav>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul style="color: green;">
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
         </div>
     </header>
 

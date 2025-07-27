@@ -1,0 +1,68 @@
+
+.depoimento-containe{
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-block: 90px;
+    
+    h3{
+        text-align: center;
+        color: #ffe4c4;
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .depoimento-card{
+        list-style-type: none;
+        background-color: #ffe4b9;
+        padding: 8px;
+        border-radius: 12px;
+        width: 250px;
+    }
+
+    li{
+        color: #444;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .depoimento-containe{
+        width: 100%;
+    }
+
+    h3{
+        font-size: 1.1rem;
+    }
+
+     ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .depoimento-card{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 880px) {
+    .depoimento-containe{
+        width: 100%;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+       .depoimentocard{
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,28 @@
+
+{% extends 'template.html' %}
+{% block content %}
+<main>
+    <!-- <div class="main-title">
+        <h2>Depoimentos<span></span><span class="big-text">Clientes satisfeitos</span></h2>
+    </div> -->
+
+    <section>
+            <div class="depoimento-container">
+                <p style="text-align: center; font-size: 2rem; color: bisque; margin-bottom: 10px;">Deixe o seu depoimento</p>
+                    <form action="/enviar-depoimentos" method="post" class="form-contact">
+                    
+                        <input type="hidden" name="data" id="data" value="{{ data }}">
+                    <label for="name">Nome</label>
+                    <input class="input-zone" type="text" id="name" name="name" placeholder="Nome" required>
+
+                    <label for="email">E-mail</label>
+                    <input class="input-zone" type="email" id="email" name="email" placeholder="Email" required>
+                    <label for="message">Mensagem</label>
+                    <textarea class="input-textarea" name="message" id="message" cols="20" rows="6" placeholder="Mensagem" required></textarea>
+                    <input class="btn-submit" type="submit" value="Enviar">
+                </form>
+            </div>
+    </section>
+</main>
+
+{% endblock %}

@@ -1,5 +1,44 @@
 
-{% extends 'template.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Veja projectos desenvolvidos em python , flask, javascript e mais. Soluções reais e funcuinais para web">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="José Baptista">
+    <title>Portfólio | José Baptista</title>
+     <meta property="og:title" content="Portfólio | José Baptista">
+    <meta property="og:description" content="Projectos reais em back-end e front-end e soluções modernas">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://2Ntechnology.com">
+    <meta property="og:image" content="https://2Ntechnology.com/static/images/projectos.png">
+
+    <script type="application/Id+json">
+        {  
+        "@context": "https://schema.org",
+        "@type": "collectionPage",
+        "name": "Portfólio de projectos",
+        "url": "https://2Ntechnology.com/portfolio",
+
+        "hasPart": [ 
+        {
+         "@type": "CreativeWork",
+         "name": "Sistema de Contrato",
+         "url": "https://2Ntechnology.com/portfolio/contrato",
+        },
+
+        {
+         "@type": "CreativeWork",
+         "name": "blog tech em flask",
+         "url": "https://2Ntechnology.com/portfolio/blog"
+        }
+        ]
+    }
+   </script>
+</head>
+<body>
+   {% extends 'template.html' %}
 {% block content %}
 
 <section>
@@ -15,16 +54,18 @@
 
          <div class="hover-item">
             <h3>Fonte do projeto</h3>
-            <div class="icons">
-               <a class="icon" href="{{ url_for('index') }}" target="_blank">
-                  <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
-               </a>
-               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+            <div class="icon">
+               <a class="icon" href="{{ url_for('index') }}">
+                  <spa style="color: bisque;">Calculadora IMC</spa>
+                  <!-- <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image"> -->
+               </a><br>
+                <span>Calcular IMC para o calculo de massa corporal. <br>Projecto desenvolvido com Html5, Css e javascript</span>
+               <!-- <a class="icon" href="{{ url_for('static', filename='css/#') }}">
                   <img src="{{ url_for('static', filename='images/whatsap.jpg' ) }}" alt="image">
                </a>
                <a class="icon" href="{{ url_for('static', filename='css/#') }}">
                   <img src="{{ url_for('static', filename='images/facebook.png' ) }}" alt="image">
-               </a>
+               </a> -->
             </div> 
          </div>
       </div>
@@ -36,7 +77,7 @@
          <div class="hover-item">
             <h3>Fonte do projeto</h3>
             <div class="icons">
-               <a class="icon" href="{{ url_for('static', filename='css/#') }}">
+               <a class="icon" href="{{ url_for('static', filename='projectos/meu-curriculo/index.html') }}">
                   <img src="{{ url_for('static', filename='images/github.jpg' ) }}" alt="image">
                </a>
                <a class="icon" href="{{ url_for('static', filename='css/#') }}">
@@ -134,3 +175,5 @@
 </section>
 
 {% endblock %}
+</body>
+</html>

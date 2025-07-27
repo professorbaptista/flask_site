@@ -42,8 +42,10 @@ header{
     overflow: hidden;
     background-color: var(--color-grey5);
     height: 90px; 
-    
-    z-index: -9000px;
+    position: fixed;
+    top: 0;
+
+    z-index: 9;
    
  
 }
@@ -129,8 +131,8 @@ header{
     height: 90px; 
 
     width: 100%;
-   position: absolute;
-  top: 100%;
+    position: absolute;
+    top: 100%;
   }
 
   footer p{
