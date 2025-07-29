@@ -74,10 +74,21 @@
     .blogs{
       grid-template-columns: 1fr;
       gap: .3rem;
-    }    
+      margin: 0 4rem 0 0;
+      
+    }  
+    
+    .main-title .title-about{
+      font-size: 2rem;
+
+      .blog-text{
+        font-size: 2rem;
+      }
+    }
 
     .blog{
-      margin: 3rem 0 1rem 1rem;
+      margin: 1rem 0 1rem 1rem;
+      width: 100%;
     }
   }
 

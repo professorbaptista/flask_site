@@ -157,6 +157,10 @@
 /* Media queries */
 @media (max-width: 600px) {
 
+  .wellcome-msg a{
+    margin-left: 15%;
+  }
+
   .header-content{
     display: grid;
     grid-template-columns: 1fr;
@@ -224,10 +228,8 @@
 
   .right-header p{
     line-height: 1.4rem;
-    font-size: 1rem;
-  }
-
-  
+    font-size: 1.4rem;
+  }  
 }
 
 

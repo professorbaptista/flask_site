@@ -30,43 +30,49 @@
   </head>
 <body class="main-content">
     <header >
-        <div class="header-container">
-           
-                <h1 class="logo">
-                    <a href="{{ url_for('home') }}">2N </a><span>Tech</span>
+        <div class="logo-container">
+               
+            <h1 class="logo">
+            <a href="{{ url_for('home') }}">2NZ</a><span>Tech</span>
                 </h1>
-            <nav >
-                <ul class="menu" >
-                    <li >
-                        <a href="{{ url_for('home') }}" class="active">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('about') }}">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('portfolio') }}">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('blog') }}">Blogue</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('depoimentoDeixado') }}">Depoimentos</a>
-                    </li>
-                    <li>
-                        <a href="{{ url_for('contacts') }}">Contactos</a>
-                    </li>
+        </div>
+    </header>
 
-                    {% if session.get('autenticado') %}
-                    <li><a href="{{ url_for( 'admin' )}}">Admin</a></li>
-                    <li><a href="{{ url_for('logout') }}">Sair</a></li>
+    <div>
 
-                    <li><a href="{{ url_for('contactos_recebidos') }}">Contactos</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Admin</a></li>
-                    {% endif %}
-                </ul>
-            </nav>
-            {% with messages = get_flashed_messages() %}
+    <div class="navbar">
+        <nav class="dropdown">
+            <div class="dropbtn">
+                <img src="{{ url_for( 'static', filename='images/icon-menu.png' ) }}" alt="Menu">
+                <span class="navbar-menu">Menu</span>
+            </div>
+            <div class="dropdown-content">
+        
+                <a href="{{ url_for('home') }}" class="active">Home</a>
+        
+                <a href="{{ url_for('about') }}">Sobre</a>
+        
+                <a href="{{ url_for('portfolio') }}">Portfolio</a>
+        
+                <a href="{{ url_for('blog') }}">Blogue</a>
+        
+                <a href="{{ url_for('depoimentoDeixado') }}">Depoimentos</a>
+        
+                <a href="{{ url_for('contacts') }}">Contactos</a>
+        
+                {% if session.get('autenticado') %}
+                <a href="{{ url_for( 'admin' )}}">Admin</a>
+                <a href="{{ url_for('logout') }}">Sair</a>
+                <a href="{{ url_for('contactos_recebidos') }}">Contactos</a>
+                 {% else %}
+                <a href="{{ url_for('login') }}"></a>
+                {% endif %}
+        
+            </div>
+        </nav>
+    </div>
+
+             {% with messages = get_flashed_messages() %}
             {% if messages %}
                 <ul style="color: green;">
             {% for message in messages %}
@@ -75,8 +81,6 @@
                 </ul>
             {% endif %}
             {% endwith %}
-        </div>
-    </header>
 
     <footer>
         <p>2N <span class="span">tech </span>&copy; todos direitos reservados</p>

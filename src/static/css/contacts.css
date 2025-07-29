@@ -152,6 +152,49 @@
 
 
   @media screen and (max-width: 600px) {
+
+   .main-title  .contact-title{
+      font-size: 2rem;
+
+       .big-text{
+      font-size: 2.3rem;
+    }
+
+    }
+
+     .contact-me{
+      font-size: 1rem;
+    }
+
+   
+
+    .contact-contact-con{
+       margin-left: 0;
+      h4{
+      font-size: 1.2rem;
+    }
+
+    .text-contact{
+      font-size: 1.4rem;
+      line-height: 1.6rem;
+    }
+
+    } 
+   
+
+    .right-contact{
+      width: 100%;
+      margin-left: 0;
+
+      p{
+        font-size: 1rem;
+      }
+    }
+
+    .form-contact{
+      width: 100%;
+       padding: 30px;
+    }
     .contact-contact-con{
      flex-direction: column;
       padding-top: 1rem;
