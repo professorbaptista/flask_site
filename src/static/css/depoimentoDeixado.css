@@ -33,6 +33,18 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    .main-title{
+        margin: 0;
+    }
+
+    .main-title .depoimento-text{
+        font-size: 1.4rem;
+
+        .big-text{
+            font-size: 1.8rem;
+        }
+    } 
     .depoimento-containe{
         width: 100%;
     }

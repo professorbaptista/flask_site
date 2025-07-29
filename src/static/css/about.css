@@ -257,6 +257,11 @@
 }
 
 @media screen and (max-width: 600px) {
+
+  .main-title{
+    margin: 0;
+    padding: 0;
+  }
  
   .main-title .title-about{
       font-size: 2rem;

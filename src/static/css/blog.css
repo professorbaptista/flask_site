@@ -77,12 +77,16 @@
       margin: 0 4rem 0 0;
       
     }  
+
+    .main-title{
+      margin: 1rem 0 2rem 0;
+    }
     
     .main-title .title-about{
-      font-size: 2rem;
+      font-size: 1.6rem;
 
       .blog-text{
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
     }
 

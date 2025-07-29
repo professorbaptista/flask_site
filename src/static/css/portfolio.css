@@ -105,8 +105,17 @@
   
   @media screen and (max-width: 600px){
 
+     .main-title{
+      margin: 0;
+      padding: 0;
+     }
+
     .main-title .portfolio-text{
-      font-size: 2rem;
+      font-size: 1.6rem;
+    }
+
+    .big-text{
+      font-size: 1.8rem;
     }
 
     /* .big-text{

@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 :root{
     --color-primary: #191d3b;
     --color-secondary: #27AE60;
@@ -204,6 +209,11 @@ header{
   }
 
  @media screen and (max-width: 600px) {
+
+    html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
     body{
         padding: 10px;

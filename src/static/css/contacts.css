@@ -166,7 +166,13 @@
       font-size: 1rem;
     }
 
-   
+   .contact-info{
+
+    .contact-item{
+      gap: 4px;
+      align-items: center;
+    }
+   }
 
     .contact-contact-con{
        margin-left: 0;
@@ -194,6 +200,18 @@
     .form-contact{
       width: 100%;
        padding: 30px;
+      
+    }
+
+    .input-control{
+      display: flex;
+      flex-direction: column;
+    }
+
+    #input-zone{
+      padding: 3px;
+      width: 100%;
+      background-color: var(--color-white);
     }
     .contact-contact-con{
      flex-direction: column;
