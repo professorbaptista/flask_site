@@ -1,12 +1,20 @@
 
-{% extends 'template.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% extends 'template.html' %}
 {% block content %}
 
 <main>
     <section>
         <div class="admin-container">
             <!-- templates/admin/dashboard.html -->
-            <h2>Painel do Administrador</h2>
+            <h1>Painel do Administrador</h1>
             <h2>Bem-vindo à área de administração</h2>
             <p>Você está autenticado.</p>
             <p>Total de contactos: {{ total_contactos }}</p>
@@ -46,3 +54,5 @@
 
 
 {% endblock %}
+</body>
+</html>

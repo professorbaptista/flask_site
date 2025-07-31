@@ -1,7 +1,9 @@
+
 .admin-container{
-    width: 760px;
+    width: 590px;
+    height: 100vh;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 20px;
     padding-block: 90px;
 
     h2{
@@ -13,5 +15,36 @@
     p{
         margin-bottom: 17px;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .admin-container{
+        width: 100%;
+        padding-block: 0;
+
+        h1{
+            font-size: 1.8rem;
+        }
+
+        p{
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 920px) {
+    .admin-container{
+        h1{
+            font-size: 2.6rem;
+        }
+
+        h2{
+            font-size: 2.1rem;
+        }
+
+        p{
+            font-size: 2rem;
+        }
     }
 }
