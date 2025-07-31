@@ -55,3 +55,21 @@
     }
     
 }
+
+
+@media screen and (min-width: 600px) and (max-width: 920px) {
+    .show-post{
+        h2{
+            font-size: 3rem;
+        }
+
+        p{
+            font-size: 2.2rem;
+            line-height: 3rem;
+        }
+
+        .voltar-cont a{
+            font-size: 2.2rem;
+        }
+    }
+}
