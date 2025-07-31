@@ -3,7 +3,7 @@
 
 .main-title{
   text-align: center;
-  margin: 2rem 0 2rem 0;
+  margin: 2rem 0 0 0;
   h2{
     position: relative;
     text-transform: uppercase;
@@ -70,10 +70,18 @@
   } 
 
   h3{
-    font-size: 1.4rem;
-    color: var(--color-white);
+    font-size: 1.8rem;
+    color: #ffe4c4;
     margin-bottom: 1.5rem;
   }
+
+  h2{
+    text-align: center;
+    color: #414;
+    text-shadow: 2px 3px 2px #ffe4c4;
+  }
+
+
 
   .icons{
     display: flex;

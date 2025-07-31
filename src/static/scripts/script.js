@@ -26,4 +26,3 @@ function mudarTexto(){
     time.style.fontWeight = 'bold'
 }
 
-

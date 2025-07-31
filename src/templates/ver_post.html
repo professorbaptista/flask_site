@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Posts</title>
+</head>
+<body>
+   {% extends 'template.html' %}
+
+    {% block title %}{{ post[1] }}{% endblock %}
+
+{% block content %}
+
+<h1>Posts Encontrados</h1>
+  <div class="show-post">
+      <h2> Titulo: {{ post[1] }}</h2>
+      <p><em>{{ post[3] }}</em></p>  <!-- Data -->
+      <p>{{ post[2] }}</p>  <!-- Conteúdo completo -->
+      
+    <div class="voltar-cont">
+    <a class="Voltar-btn" href="{{ url_for('blog') }}">← Voltar</a>
+    </div>
+      
+        <!-- {% if post[4] %}
+        <img src="{{ url_for('static', filename='uploads/' ~ post[4]) }}" width="400">
+        {% endif %}
+        <a href="{{ url_for('blog') }}">← Voltar</a>
+        {% endblock %} -->
+  </div>
+
+</body>
+</html>

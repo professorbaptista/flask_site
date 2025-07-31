@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar posts</title>
+</head>
+<body>
+{% extends 'template.html' %}
+{% block content %}
+    <div class="editar-posts">
+        <h2>Editar Posts</h2>
+  <form method="POST" class="editar-form">
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" id="titulo" value="{{ post[1] }}" required>
+
+    <label for="conteudo">Conteúdo:</label>
+    <textarea name="conteudo" id="conteudo" rows="10" required>{{ post[2] }}</textarea>
+
+    <button type="submit">Editar post</button>
+    </form>
+    <div class="voltar-cont"><a class="Voltar-btn" href="{{ url_for('blog') }}">← Voltar</a></div>
+    {% endblock %}
+    </body>
+    </html>

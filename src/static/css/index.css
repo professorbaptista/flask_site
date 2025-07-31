@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+thml, body{
+    overflow-x: hidden;
+}
+
 :root{
 --color1:  #26251c;
 --color2:  #eb0a44;
@@ -29,7 +33,8 @@ body{
 /* botão Voltar */
 
 section{
-    width: 510px;margin: 0 auto;
+    width: 510px;
+    margin: 0 auto;
     margin-top: 10px;
 }
 .botao-voltar{
@@ -53,7 +58,7 @@ section{
 }
 
 #container{
-    width: 600px;
+    width: 450px;
     height: auto;
     position: absolute;
     top: 50%;
@@ -240,11 +245,17 @@ h2{
 }
 
 @media screen and (max-width: 600px) {
+
+    html, body{
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
     h2{
         font-size: 1rem;
     }
-    .container{
+    #container{
         width: 100%;
+        height: 100vh;
     }
 
     p{

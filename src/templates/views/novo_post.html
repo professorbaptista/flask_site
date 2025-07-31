@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Post</title>
+</head>
+<body>
+    {% extends 'template.html' %}
+    {% block content %}
+    <section>
+        <div class="posts">
+            <h2>Crie o seu Posts</h2>
+            <p>Deixe a sua opinião sobre o tema.</p>
+            <form action="/blog/novo" method="POST" class="form-contact">
+                <label for="titulo">Titulo: </label>
+                 <input class="input-post" type="text" name="titulo" id="titulo" placeholder="Introduz o titulo" required>
+                 <label for="conteudo">Conteúdo: </label>
+                 <textarea class="post-textarea" name="conteudo" placeholder="Conteúdo..." cols="30" rows="6" required></textarea>
+                 <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </section>
+   {% endblock %}
+</body>
+</html>

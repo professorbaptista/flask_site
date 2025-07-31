@@ -29,40 +29,45 @@
 {% extends 'template.html' %}
 {% block content %}
 
-    <div class="wellcome-msg">
-         <h1>{{ texts.title }}</h1>
-        <a href="{{ url_for('download_cv')}}">{{ texts.cv_link}}</a>
-        <br><br>
-        <a href="{{ url_for('change_lang') }}">{{ texts.change_lang }}</a>
-    </div>
-    <div class="header-content">
-       
-        <!-- Lado esquerdo -->
-        <div class="right-header">
-            <h1 class="name">
-              Olá, sou o <span>Jose Baptista.</span>
-                Um Desenvolvedor web  Full-Stack.
-            </h1>
-            
-            <p class="name-parag">Mestrado em psicologia social desde 2019 e graduado em psicologia do trabalho e das organizaçoes em 2013. Com uma especialização em relações humanas modernas e consciente.</p>
-            <p class="name-parag">Desde 2020 que dispertei o interesse em tecnologias, sobretudo em programação e desenvolvimento Web. Sou desenvolvidor Web Full Stack com amplos conhecimentos em Javascript, node js e frameworks como react, typescript, para além de domínio do python e suas frameworks como o Flesk.</p>
-            <p class="name-parag">Atuo no desenvolvimento de sites dinâmicos e apliativos web, construção de APIs, Microservices etc.</p>
-                     
-            <div class="btn-con">
-                   <a href="{{ url_for('download_cv')}}" class="main-btn">
-                    <span class="btn-text">Baixar o meu CV</span>
-                    <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="">
-                </a>
+    <!-- <section class="fade-in">
+        <h2>em-vindo à 2NZ Technology</h2>
+        <p>Somos especialistas em soluções web, mobile e IA</p>
+    </section> -->
+        <div class="wellcome-msg">
+             <h1>{{ texts.title }}</h1>
+            <a href="{{ url_for('download_cv')}}">{{ texts.cv_link}}</a>
+            <br><br>
+            <a href="{{ url_for('change_lang') }}">{{ texts.change_lang }}</a>
+        </div>
+        <div class="header-content">
+        
+            <!-- Lado esquerdo -->
+            <div class="right-header">
+                <h1 class="name">
+                  Olá, sou o <span>Jose Baptista.</span>
+                    Um Desenvolvedor web  Full-Stack.
+                </h1>
+        
+                <p class="name-parag">Mestrado em psicologia social desde 2019 e graduado em psicologia do trabalho e das organizaçoes em 2013. Com uma especialização em relações humanas modernas e consciente.</p>
+                <p class="name-parag">Desde 2020 que dispertei o interesse em tecnologias, sobretudo em programação e desenvolvimento Web. Sou desenvolvidor Web Full Stack com amplos conhecimentos em Javascript, node js e frameworks como react, typescript, para além de domínio do python e suas frameworks como o Flesk.</p>
+                <p class="name-parag">Atuo no desenvolvimento de sites dinâmicos e apliativos web, construção de APIs, Microservices etc.</p>
+        
+                <div class="btn-con">
+                       <a href="{{ url_for('download_cv')}}" class="main-btn">
+                        <span class="btn-text">Baixar o meu CV</span>
+                        <img class="btn-icon" src="{{ url_for('static', filename='images/search.png') }}" alt="">
+                    </a>
+                </div>
+            </div>
+               <!-- Lado direito -->
+            <div class="left-header">
+                <div class="h-shape"></div>
+                <div class="image">
+                    <img src="{{ url_for('static', filename='images/jose.webp') }}">
+                </div>
             </div>
         </div>
-           <!-- Lado direito -->
-        <div class="left-header">
-            <div class="h-shape"></div>
-            <div class="image">
-                <img src="{{ url_for('static', filename='images/jose.webp') }}">
-            </div>
-        </div>   
-    </div>
+   
 
 
 {% endblock %}

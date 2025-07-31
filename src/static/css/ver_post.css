@@ -1,0 +1,57 @@
+
+
+.show-post{
+    padding-block: 80px;
+    margin: 0 auto;
+    width: 590px;
+    height: 100vmax;
+
+    h2{
+        text-align: center;
+        color: #ffe4c4;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    p{
+        color: #dbe1e8;
+        line-height: 2rem;
+        font-size: 1.3rem;
+    }
+}
+
+.voltar-cont{
+    .voltar-cont{
+        border: 2px solid #ffe4c4;
+        position: absolute;
+        padding: 6px;
+        left: 45%;
+        bottom: 10%;
+    }
+
+    .Voltar-btn{
+        text-decoration: none;
+        color: #ffe4c4;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+}
+
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+    .show-post{
+        width: 100%;
+        padding-block: 0;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        p{
+            font-size: 1.3rem;
+        }
+    }
+    
+}

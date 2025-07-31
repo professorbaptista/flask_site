@@ -27,13 +27,16 @@
 </head>
 <body>
    {% extends 'template.html' %}
-{% block content %}
+   {% block content %}
 
 <section>
+   <!-- <p>Total de posts: {{ posts|length }}</p> -->
+
    <div class="blog-content">
       <div class="main-title">
          <h2 class="title-about">Blogues <span class="big-text">Meus Blogues</span></h2>
       </div>
+       
       <div class="blogs">
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
@@ -78,7 +81,45 @@
             </div>
          </div>
       </div>
+       <!-- <section class="fade-in">
+         <h2>Bem-vindo à 2NZ Technology</h2>
+         <p>Somos especialistas em soluções web, mobile e IA</p>
+      </section> -->
 </section>
+<section>
+         
+           <!-- <div class="posts-container"> -->
+              {% for post in posts %}
+            <div class="posts-card">
+               
+               <div class="card">
+                  <h2>Titulo: {{ post[1] }}</h2>
+                  <p>{{ post[3] }}</p>
+                  <p><em>{{ post[2] }}</em></p>
+                  <div class="editar-excluir">
+                     <a href="{{ url_for('editar_post', id=post[0]) }}">Editar</a>
+                     <form action="{{ url_for('excluir_post', id=post[0]) }}" method="POST" style="display:inline;">
+                     <button type="submit" onclick="return confirm('Tem certeza?')">
+                        Excluir
+                     </button>
+                     </form>
+                  </div>
+
+                    <div class="ler-mais">
+                     <p>{{ post[2][:150] }}...</p>
+                     <a href="{{ url_for('ver_post', id=post[0]) }}">Ler mais</a>
+                     <hr>
+                  </div>
+               </div>
+            </div>
+           
+          
+      
+      {% else %}
+      <p>Nenhum post publicado.</p>
+      {% endfor %}
+      </section>
+
 
 {% endblock %}
 </body>

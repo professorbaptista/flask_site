@@ -32,6 +32,17 @@ def criar_tabelas():
         )
     ''')
 
+    cursor.execute('''
+        CREATE TABLE IF NOT EXISTS blogue(
+                   id INTEGER PRIMARY KEY AUTOINCREMENT,
+                   titulo TEXT NOT NULL,
+                   conteudo TEXT NOT NULL,
+                   data_post DATETIME DEFAULT CURRENT_TIMESTAMP
+                   ) 
+
+''')
+    
+
     conn.commit()
     conn.close()
     print("Tabelas criadas com sucesso!")

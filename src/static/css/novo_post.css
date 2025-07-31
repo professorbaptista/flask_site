@@ -1,0 +1,134 @@
+
+.posts{
+    padding-block: 120px;
+   
+}
+
+.posts h2{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 2rem 2rem;
+    font-size: 2rem;
+    color: #ffe4c4;
+
+}
+
+.posts p{
+    text-align: center;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+ .posts .form-contact{
+    width: 40%;
+    margin: 0 auto;
+}
+
+label{
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+ .posts .form-contact .input-post{
+    padding: 9px 4px;
+    border-radius: 12px;
+    border: 0;
+    outline: none;
+    background-color: #333;
+    color: #ffe4c4;
+}
+
+.posts button{
+    border: 3px solid #ffe4c4;
+    outline: none;
+    padding: 4px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.8rem;
+    color: #ffe4c4;
+    &:hover{
+        background-color: #ffe4c4;
+        color: #333;
+    }
+    
+}
+
+
+/* Media queries*/
+@media screen and (max-width: 600px) {
+
+    .posts{
+        width: 100%;
+        padding-block: 0;
+        height: 100vh;
+    }
+
+    .posts h2{
+        font-size: 1.2rem;
+    }
+
+     .posts .form-contact{
+        width: 100%;
+        height: 40%;
+    }
+    label{
+        font-size: 1rem;
+    }
+
+    .posts .form-contact .input-post{
+        padding: 5px 5px;
+        font-size: 1.3rem;
+    }
+/* 
+    .post-textarea{
+        font-size: 1.5rem;
+        padding: unset;
+        padding: 20px 10px;
+    } */
+
+    .posts button{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+/* Ipads*/
+@media screen and (min-width: 600px) and (max-width: 920px){
+      .posts{
+        max-width: 100%;
+        height: 100vh;
+    }
+
+    .posts h2{
+        font-size: 3rem;
+    }
+
+    .posts p{
+        font-size: 2rem;
+    }
+
+    label{
+        font-size: 1.8rem;
+        margin: 1.4rem;
+
+    }
+
+    .posts .form-contact{
+        width: 80%;
+        height: max-content;
+    }
+
+    .posts .form-contact .input-post{
+        padding: unset;
+        padding: 10px 8px;
+    }
+
+      .posts button{
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+
+}

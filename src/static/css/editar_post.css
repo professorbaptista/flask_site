@@ -1,0 +1,118 @@
+
+.editar-posts{
+    padding-block: 150px;
+    width: auto;
+    margin: 0 auto;
+    
+
+    h2{
+        text-align: center;
+        color: #ffe4c4;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        border: 2px solid var(--color-grey1);
+        max-width: 440px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 12px;
+
+        input{
+            padding: 6px 4px;
+            border: 0;
+            outline: none;
+            border-radius: 7px;
+            background-color: #333;
+            color: beige;
+            font-size: 1rem;
+        }
+    }
+
+    textarea{
+        border: 0;
+        outline: none;
+        border-radius: 12px;
+        background-color: #333;
+        color: beige;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    button{
+        background-color: transparent;
+        border: 3px solid #ffe4c4;
+        outline: none;
+        border-radius: 12px;
+        cursor: pointer;
+        color: beige;
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 1.1rem;
+
+        &:hover{
+            background-color: #333;
+            color: #ffe4c4;
+        }
+    }
+
+    .voltar-cont{
+        border: 2px solid #ffe4c4;
+        position: absolute;
+        padding: 6px;
+        left: 45%;
+        bottom: 10%;
+    }
+    .Voltar-btn{
+        text-decoration: none;
+        color: #ffe4c4;
+    }
+}
+
+/*Media queries*/
+@media screen and (max-width: 600px) {
+    .editar-posts{
+        width: 100%;
+        padding-block: 0;
+        height: 100vh;
+
+        h2{
+            font-size: 2.5rem;
+            margin-top: 20px;
+        }
+
+        label{
+            font-size: 1.4rem;
+        }
+
+        input{
+            font-size: 1.4rem;
+        }
+
+        .textarea{
+            font-size: 1.4rem;
+        }
+
+        button{
+            font-size: 1.8rem;
+        }
+    }
+    
+    /* .voltar-cont{
+        position: absolute;
+        bottom: 150%;
+    } */
+}
+
+
+@media screen and (min-width: 660px) and (max-width: 920px) {
+    .editar-posts{
+        width: 100%;
+        height: 100vh;
+    }
+    
+}

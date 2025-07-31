@@ -50,9 +50,91 @@ def about():
 def portfolio():
     return render_template('portfolio.html')
 
+# Rota do blogue
 @app.route("/blog")
 def blog():
-    return render_template('blog.html')
+
+    conn = database.connectar()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM blogue ORDER BY data_post DESC")
+
+    posts = cursor.fetchall()
+    print('Posts enviados; ', posts)
+    conn.close()
+
+    return render_template('blog.html', posts = posts)
+
+# Rota para adicionar post no blog.
+@app.route('/blog/novo', methods=['GET', 'POST'])
+def novo_post():
+
+    if request.method == 'POST':
+        # Buscando informaçoes do body
+        titulo = request.form.get('titulo')
+        conteudo = request.form.get('conteudo')
+
+        # Fazendo verificação.
+        if not titulo and not conteudo:
+            flash('Todos os campos são obrigatórios.')
+            print('Todos campos são obrigatórios.')
+            return redirect(url_for('blog/novo'))
+
+        #Connectando ao banco de dados.
+        conn = database.connectar()
+
+        cursor = conn.cursor()
+        cursor.execute("INSERT INTO blogue (titulo, conteudo) VALUES (?, ?)", (titulo, conteudo))
+
+        conn.commit()
+        conn.close()
+        return redirect(url_for('blog'))
+    return render_template('views/novo_post.html')
+
+# Rotas editar e excluir posts
+@app.route('/blog/editar/<int:id>', methods=['GET', 'POST'])
+def editar_post(id):
+    # Chamar o banco de dados 
+    conn = database.connectar()
+    cursor = conn.cursor()
+
+    #Buscar o elementos do body
+    if request.method == 'POST':
+        titulo = request.form.get('titulo')
+        conteudo = request.form.get('conteudo')
+        # Atualiza os dados no banco
+        cursor.execute("UPDATE blogue SET titulo=?, conteudo=? WHERE id=?", (titulo, conteudo, id))
+        conn.commit()
+        conn.close()
+        flash('Post atualizado com sucesso!')
+        return redirect(url_for('blog'))
+    
+    # Busca dados no banco
+    cursor.execute("SELECT * FROM blogue WHERE id=?", (id,))
+    post = cursor.fetchone()
+    conn.close()
+    return render_template('editar_post.html', post=post)
+
+# Rota para excluir posts
+@app.route('/blog/excluir/<int:id>', methods=['POST'])
+def excluir_post(id):
+    conn = database.connectar()
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM blogue WHERE id=?", (id,))
+    conn.commit()
+    conn.close()
+    flash('Post excluído com sucesso!')
+    return redirect(url_for('blog'))
+
+# Rota para ver posts
+@app.route('/ver-post/<int:id>')
+def ver_post(id):
+    conn = database.connectar()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM blogue WHERE id=?", (id,))
+    post = cursor.fetchone()
+    conn.close()
+    return render_template('ver_post.html', post=post)
+
 
 # Rota para baixar pdf
 @app.route('/download-cv')
@@ -161,7 +243,7 @@ def contacts():
 def login():
     if request.method == 'POST':
         senha = request.form.get('password')
-        if senha == 'nzinganzonene2025':
+        if senha == 'nzinganzonene221275':
             session['autenticado'] = True
             flash('Login efetuado com sucesso!')
             return redirect(url_for('admin'))
@@ -173,6 +255,7 @@ def login():
 
 
 # Rota protegida
+
 @app.route('/admin')
 def admin():
 
@@ -208,4 +291,3 @@ def logout():
 @app.route("/index")
 def index():
     return render_template('index.html')
-
