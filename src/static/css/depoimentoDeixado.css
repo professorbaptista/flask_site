@@ -49,6 +49,7 @@
 
     .main-title{
         margin: 0;
+        padding-block: 0;
     }
 
     .main-title .depoimento-text{
