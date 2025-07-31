@@ -86,7 +86,7 @@
   flex-direction: column;
   justify-content: center;
   padding-right: 2rem;
-  padding-top: 4rem;
+  padding-top: 2rem;
 
 }
 
@@ -166,12 +166,18 @@
   }
   .wellcome-msg a{
     text-align: center;
-    margin-left: 15%;
+    margin-left: 12.5%;
   }
+
+
+    .right-header .name{
+      font-size: 1rem;
+      text-align: start;
+    }
 
     .right-header p{
     line-height: 2.4rem;
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }  
 
   .header-content{

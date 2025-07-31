@@ -60,21 +60,17 @@
         }
     }
 
-    .voltar-cont{
-        border: 2px solid #ffe4c4;
-        position: absolute;
-        padding: 6px;
-        left: 45%;
-        bottom: 10%;
+    .voltar-cont .Voltar-btn{
+         text-decoration: none;
+        color: #ffe4c4;   
     }
-    .Voltar-btn{
-        text-decoration: none;
-        color: #ffe4c4;
-    }
+    
 }
 
 /*Media queries*/
 @media screen and (max-width: 600px) {
+
+    
     .editar-posts{
         width: 100%;
         padding-block: 0;
@@ -106,6 +102,8 @@
         position: absolute;
         bottom: 150%;
     } */
+
+    
 }
 
 

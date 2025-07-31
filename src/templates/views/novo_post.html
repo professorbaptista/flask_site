@@ -13,13 +13,21 @@
         <div class="posts">
             <h2>Crie o seu Posts</h2>
             <p>Deixe a sua opinião sobre o tema.</p>
-            <form action="/blog/novo" method="POST" class="form-contact">
-                <label for="titulo">Titulo: </label>
-                 <input class="input-post" type="text" name="titulo" id="titulo" placeholder="Introduz o titulo" required>
-                 <label for="conteudo">Conteúdo: </label>
-                 <textarea class="post-textarea" name="conteudo" placeholder="Conteúdo..." cols="30" rows="6" required></textarea>
-                 <button type="submit">Publicar</button>
-            </form>
+            <div>
+                <form action="/blog/novo" method="POST" class="form-contact">
+                    <label for="titulo">Titulo: </label>
+                     <input class="input-post" type="text" name="titulo" id="titulo" placeholder="Introduz o titulo" required>
+                     <label for="conteudo">Conteúdo: </label>
+                     <textarea class="post-textarea" name="conteudo" placeholder="Conteúdo..." cols="30" rows="6" required></textarea>
+                     <button type="submit">Publicar</button>
+                </form>
+
+                <div class="voltar-cont">
+                    <a class="Voltar-btn" href="{{ url_for('blog') }}">← Voltar</a>
+                </div>
+            </div>
+
+        
         </div>
     </section>
    {% endblock %}

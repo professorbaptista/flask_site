@@ -36,6 +36,11 @@ label{
     outline: none;
     background-color: #333;
     color: #ffe4c4;
+    font-size: 1.2rem;
+}
+
+.posts .form-contact .post-textarea{
+    font-size: 1.2rem;
 }
 
 .posts button{
@@ -52,6 +57,19 @@ label{
         color: #333;
     }
     
+}
+
+.voltar-cont{
+    width: 200px;
+    margin: 25%;
+
+    .voltar-btn{
+        color: darkgrey;
+        font-size: 1.4rem;
+        &:hover{
+            color: #ffe4c4;
+        }
+    }
 }
 
 
