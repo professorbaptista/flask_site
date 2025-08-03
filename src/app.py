@@ -3,6 +3,11 @@
 from flask import Flask, render_template, url_for, redirect, request, flash, session, send_from_directory
 import os 
 import database
+
+# Importação de arquivo xml.
+from sitemap import sitemap_bp
+
+# Instanciando flask.
 app = Flask(__name__)
 
 # secret-key
@@ -25,12 +30,7 @@ TRANSLATIONS = {
     }
 }
 # Rota sitemap
-@app.route('/sitemap.xml')
-def sitemap():
-   
-    return send_from_directory(directory=os.path.abspath('.'), path= 'sitemap.xml', 
-                mimetype='text/xml'
-                )
+app.register_blueprint(sitemap_bp)  # 👈 registrando
 
 # ROTAS 
 @app.route("/")
