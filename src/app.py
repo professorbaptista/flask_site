@@ -1,11 +1,9 @@
 
 
 from flask import Flask, render_template, url_for, redirect, request, flash, session, send_from_directory
+import os 
 import database
-
 app = Flask(__name__)
-
-
 
 # secret-key
 app.secret_key = 'nzinganzonene2212'
@@ -26,6 +24,13 @@ TRANSLATIONS = {
         'change_lang': 'Switch to portuguese'
     }
 }
+# Rota sitemap
+@app.route('/sitemap.xml')
+def sitemap():
+   
+    return send_from_directory(directory=os.path.abspath('.'), path= 'sitemap.xml', 
+                mimetype='text/xml'
+                )
 
 # ROTAS 
 @app.route("/")
@@ -50,7 +55,7 @@ def about():
 def portfolio():
     return render_template('portfolio.html')
 
-# Rota do blogue
+# Rota do blogue com posts.
 @app.route("/blog")
 def blog():
 

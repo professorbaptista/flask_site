@@ -3,7 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>2NZ tecchnology | Tecnologia para todos</title>
+    <meta name="description" content="Site de tecnlogia com conteúdos, dicas, soluções e novidades para todos">
+    <meta name="keywords" content="tecnologia, informática, softwares, dicas, novidades, técnico">
+    <meta name="author" content="José Baptista">
+
+    <!-- open graph para facebook -->
+     <meta property="og:title" content="site de técnologia | soluções para todos">
+     <meta property="og:description" content="Plataforma com dicas, conteúdos e soluções para técnologias">
+     <meta property="og:image" content="">
+     <meta proterty="og:url" content="https://twonz-technology.onrender.com">
+     <meta property="type" content="website">
+
+     <!-- Twetter cards -->
+      <meta name="twetter:card" content="">
+      <meta name="twetter:title" content="Site de tecnologia">
+      <meta name="twetter:description" content="Soluções e conteúdos do mundo de tecnologia">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
@@ -93,6 +108,17 @@
 
     <footer>
         <p>2NZ<span class="span">tech </span>&copy; todos direitos reservados</p>
+        <div class="social-redes">
+            <a href="https://www.facebook.com/josenzinga.baptista"  target="_blank">
+                <img src="{{ url_for('static', filename='images/facebook_1.webp')}}" alt="Facebook">
+            </a>
+            <a href="/https://whatsapp.com/josenzingabaptista" target="_blank">
+                <img src="{{ url_for('static', filename='images/whatsap_2a.webp')}}" alt="">
+            </a>
+            <a href="/https://instagram.com/josenzinga" target="_blank">
+                <img src="{{ url_for('static', filename='images/instagram.jpg')}}" alt="Instagram">
+            </a>
+        </div>
     </footer>
     
     {% block content %}

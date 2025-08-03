@@ -191,10 +191,13 @@ header{
   footer{
     color: var(--color-white);
     background-color: var(--color-grey5);
-    height: 90px; 
+    height: 190px; 
     width: 100%;
     position: absolute;
     top: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
   }
 
   footer p{
@@ -207,6 +210,22 @@ header{
     text-transform: uppercase;
     color: var(--color-grey2);
   }
+
+  footer .social-redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  }
+
+  
 
  @media screen and (max-width: 600px) {
 
