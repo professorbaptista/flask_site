@@ -9,6 +9,13 @@
     color: var(--color-grey1);
   }
 
+  .small-texto{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 40px;
+    color: var(--color-grey1);
+  }
+
   .blogs{
     display: grid;
     grid-template-columns: repeat(3, 1fr);

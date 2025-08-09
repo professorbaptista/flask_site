@@ -46,20 +46,25 @@
    <div class="blog-content">
       <div class="main-title">
          <h2 class="title-about">Blogues <span class="big-text">Meus Blogues</span></h2>
+          <p class="small-texto">Seja Bem-vindo ao meu blogue! Aqui você encontrará vários artigos sobre a tecnologia.</p>
       </div>
        
       <div class="blogs">
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website</h4>
-               <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
+               <a href="{{ url_for('introducao_html')}}">
+                  <h4>Introdução ao HTML</h4>
+               </a>
+               <p>Html é uma linguagem de marcação de texto para estruturar uma página web...</p>
             </div>
          </div>
          <div class="blog">
             <img src="{{ url_for('static', filename='images/portF.webp') }}" alt="">
             <div class="blog-text">
-               <h4>Como criar um website responsivo</h4>
+               <a href="">
+                  <h4>Introdução a CSS</h4>
+               </a>
                <p>Conteúdos em fase de elaboração. Brevemente será publicado.</p>
             </div>
          </div>

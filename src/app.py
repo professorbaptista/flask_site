@@ -67,7 +67,12 @@ def blog():
     print('Posts enviados; ', posts)
     conn.close()
 
-    return render_template('blog.html', posts = posts)
+    return render_template('views/blog.html', posts = posts)
+
+# Rota para linkar aos artigos do blogue.
+@app.route('/introducao-html')
+def introducao_html():
+    return render_template('views/introducao_html.html')
 
 # Rota para adicionar post no blog.
 @app.route('/blog/novo', methods=['GET', 'POST'])

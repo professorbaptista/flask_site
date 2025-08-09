@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Html</title>
+    <link rel="stylesheet" href="/css/introducao_html.css">
+</head>
+<body>
+    {% extends 'template.html' %}{% block content %}
+    <div class="artigo-html">
+        <h1>Conceitos básicos de HTML</h1>
+        <h2>Introdução</h2>
+        <p><em class="big-letter">N</em>este artigo vou fazer uma abordar sobre os princípios básicos do HTML, para você começar. Primeiramente, vou definimos os elementos, atributos e todos os outros termos importantes da linguagem e onde encaixa-los na estruturação de uma página web. Vou, igualmente, mostrar como um elemento HTML é estruturado, como uma página HTML típica é estruturada e explicarei outras importantes características básicas da linguagem. Ao longo deste artigo, veremos como linguagem HTML exibe os elementos na página web, acompanhe até ao fim.</p>
+        <h2>O que vamos ver neste artigo?</h2>
+        <ul>
+            <li>O que é HTML?</li>
+            <li>Elementos Html</li>
+            <li>Anatomia de um elementos Html</li>
+            <li>Atributos</li>
+            <li>Estrutura de um documento Html</li>
+            <li>Comentários em Html</li>
+            <li>Carácteres especiais em Html</li>
+        </ul>
+        <h2>O que é HTML?</h2>
+        <p>HTML, do Inglês, (HyperText Markup Language), traduzido em português, linguagem de marcação de hiperTexto, utilizada para dizer ao seu navegador como estruturar a página web que você visita. A página pode ser tanto complicada como simples quanto o desenvolvedor web desejar que seja. HTML consiste em uma série de elementos ou tags que você usa para anexar, envolver ou marcar diferentes partes do conteúdo para que apareça na págin web.</p>
+        <p>É importante realçar que HTML não é uma linguagem de programação, como o java, javsacript, python e muitas outras linguagens de programação que existem por aí, porém é uma linguagem que serve para marcar conteúdo nas páginas web.</p>
+        <p>Por exemplo, se queremos escrever o texto.</p>
+        <p class="exemplo1">Meu primeiro site.</p>
+        <p>Devemos fazer recurso à uma tag HTML para marcar ou envolver este conteúdo no sentido de o navegador o interpretar como um parágrafo. Para isso utilizariámos a seguinte tag.</p>
+        <p class="exemplo1">&lt;p&gt;Meu primeiro site.&lt;/p&gt;</p>
+        
+        <p>Repare que o nosso parágrafo está cercado por sinais de &lt;p&gt; que simboliza a abertura da tag e por &lt;/p&gt; que indica o fechamento da tag. É importante lembrar que a abertura e fechamento da tag é obrigatório, senão podemos ter resultados inesperados.</p>
+        <h2>Elementos HTML</h2>
+        <p>Como já tivemos a oportunidade de ver, para exibir um conteúdo na página web, recorremos à tag &lt;p&gt;...&lt;/p&gt;. Esta tag e o seu respectivo conteúdo é que designamos de elemento Html. Importa lembrar que existem vários elementos ou tag Html que servem para endexar ou marcar diferentes conteúdos em diferentes partes da página web.</p>
+        <h2>Anatomia de um elementos Html</h2>
+        <p>Vamos, então, explorar melhor o nosso elemento parágrafo:</p>
+        <p class="exemplo1">&lt;p&gt; Meu primeiro site &lt;/p&gt;</p>
+        <ol>
+            <li>&lt;p&gt; tag de abertura. Indica o nome do elemento ( neste caso: p ), envolvido entre sinais de menor e maior mostrando a abertura e fechamento. Isso indica onde o elemento começa, ou inicia a produzir efeito — neste caso, onde o parágrafo se inicia.</li>
+            <li>&lt;/p&gt; tag de fechamento. É o mesmo que a tag de abertura, exceto que este inclui uma barra diagonal antes do nome do elemento. Indica onde o elemento termina — neste caso, onde fica o fim do parágrafo. Falhar em incluir o fechamento de uma tag é um erro comum para iniciantes e pode levar a resultados estranhos.</li>
+            <li>Meu primeiro site. conteúdo da tag: Este é o conteúdo do elemento, que neste caso é somente texto.</li>
+            <li>&lt;p&gt;, &lt;/p&gt; e Meu primeiro site. Elemento Html: A tag de abertura, mais a tag de fechamento, mais o conteúdo, é igual ao elemento.</li>
+        </ol>
+        <h2>Aninhamento de elementos</h2>
+        <p>É possivel inserir elementos dentro de outros elementos — isto é chamado de aninhamento. Se, por exemplo, quisessémos destacar a palavra site no nosso parágrafo, nós poderiámos envolver a palavra "site" com o elemento <strong>, que significa enfatizar fortemente a palavra:</p>
+        <p class="exemplo2">&lt;p&gt;Meu primeiro &lt;strong&gt;site.&lt;/strong&gt;</p>
+        <p>O resultado é o seguinte</p>
+        <p class="exemplo2">Meu primeiro <strong>site</strong></p>
+        <p>É precisa garantir que seus elementos estejam devidamente aninhados: no exemplo acima nós abrimos o elemento p primeiro, e dentro dele o elemento strong, e devemos fechar o elemento strong primeiro, depois o p. Caso os elementos estejam sobrepostos resultará em erro.</p>
+
+        <h2>Elementos bloco e inline</h2>
+        <p>Existe duas categorias de elementos em Html. Os elementos bloco e inline.</p>
+        <ul>
+            <li>Elementos em bloco formam um bloco visível na página, ou seja, ocupam todo o espaço onde estão colocados. Eles ocuparão uma nova linha logo após qualquer outro elemento que venha antes dele, e qualquer conteúdo que vem depois de um elemento em bloco, também, aparecerá em uma nova linha. Elementos em bloco geralmente são elementos estruturais na página que representam, por exemplo: parágrafos, listas, menus de navegação, rodapés etc. Um elemento em bloco não pode ser aninhado dentro de um elemento inline, mas podemos aninhar-lo dentro de outro elemento em bloco.</li>
+            <li>Elementos inline (na linha) são aqueles que estão contidos dentro de elementos em bloco, ou seja, eles ocupam apenas pequenas partes do conteúdo do documento e não parágrafos inteiros ou agrupamentos de conteúdo. Um elemento inline não fará com que uma nova linha apareça no documento: os elementos inline geralmente aparecem dentro de um parágrafo de texto, por exemplo: um elemento &lt;a&gt; (hyperlink) ou elementos de ênfase como &lt;em&gt; ou &lt;strong&gt;.</li>
+        </ul>
+
+        <p>Vamos ver alguns exemplos representando elementos blocos e inline.</p>
+        <div class="exemplo3">
+            <p>Elementos inline</p>
+            &lt;em&gt;Meu&lt;/em&gt;
+            &lt;em&gt;primeiro&lt;/em&gt;
+            &lt;em&gt;site&lt;/em&gt;
+            <p>Resultado:</p>
+             <em>Meu</em>
+            <em>primeiro</em>
+            <em>site</em>
+            <p>Elementos em bloco</p>
+            &lt;p&gt;Meu&lt;/p&gt;<br>
+            &lt;p&gt;primeiro&lt;/p&gt;<br>
+            &lt;p&gt;site&lt;/p&gt;
+            <p>Resultado:</p>
+           
+            
+            <p>Meu</p>
+            <p>primeiro</p>
+            <p>site</p>
+        </div>
+        <p>Como podemos reparar os elementos inline aparecem todos em uma linha só, apesar de na marcação estarem um em baixo do outro. <br> Os elementos bloco ocupam uma linha inteira, posicionando-se um em baixo do outro.</p>
+
+        <h2>Elementos vazios</h2>
+        <p>Não obstante o que dissemos anteriormente, nem todos os elementos seguem o padrão normal de: tag de abertura, conteúdo, tag de fechamento. Alguns elementos possuem apenas uma única tag, que é, geralmente, usada para inserir/incorporar algo no documento no lugar em que ele é incluído. Por exemplo, o elemento &lt;img&gt; insere uma imagem em uma página na posição em que ele é incluído:</p>
+        <p>Exemplo de alguns elementos vazios:</p>
+        <div class="exemplo3">
+            &lt;img&gt;<br>
+            &lt;input&gt;
+        </div>
+        <p>Estes elementos são chamados vazios, como vimos no exemplo anterior, porque elas possuem apenas a tag de abertura, porém não possuem conteúdo nem tag de fechamento.</p>
+        <h2>Atributos</h2>
+        <p>Elementos também podem conter atributos, que apresentam informações adicionais ao elemento, mas que nós não queremos que apareça no conteúdo da página.</p>
+        <p>Existem vários tipos de atributos e eles são colocados dentro de tag de abertura do elemento. Por exemplo: o atributo class, id, title, name etc.</p>
+           <p>A tag &lt;img&gt;, por exemplo, possui como atributo obrigatório o src seguido de sinal de igual, aspa de abertura, o valor do atributo e aspa de fechamento.</p>
+       
+        <p>Um atributo deve conter:</p>
+        <ol>
+            <li>Um espaço entre ele e o nome do elemento (ou o atributo anterior, caso o elemento já contenha um ou mais atributos.)</li>
+            <li> O nome do atributo, seguido por um sinal de igual.</li>
+            <li> Um valor de atributo, com aspas de abertura e fechamento em volta dele.</li>
+        </ol>
+        <p>Os atributos são essenciais para os elementos Html porque permitem especificar o elemento.</p>
+
+         <h2>Anatomia de um documento HTML</h2>
+         <p>Já vimos os conceitos básicos dos elementos individuais do HTML, mas eles não são muito úteis sozinhos. Vamos aprender como estes elementos individuais são combinados entre si para criar uma página HTML inteira:</p>
+    <div class="exemplo3">
+        &lt;!doctype html&gt;<br>
+        &lt;html&gt;<br>
+        &lt;head&gt;<br>
+        &lt;meta charset="utf-8" /&gt;<br>
+        &lt;title&gt;Meu prineiro site&lt;/title&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        &lt;p&gt;Meu prineiro site&lt;/p&gt;<br>
+        &lt;/body&gt;<br>
+        &lt;/html&gt;
+    </div>
+    <p>O código que acabamos de ver estrutura uma página web. <br> O código é dividido em várias partes fundamentais. Vamos, então desmuiçar estas partes.</p>
+    <ol>
+        <li> &lt;!DOCTYPE html&gt; é a menor cadeia de caracteres que conta como um doctype válido; é tudo o que você, realmente, precisa saber.</li>
+
+        <li>&lt;html&gt;...&lt;/html&gt;: O elemento &lt;html&gt; envolve ou aninha o conteúdo da página inteira, lembra-se quando falamos de aninhamento, pois é, todos elementos Html são aninháveis, começando pela tag Html, conhecido como o "elemento raiz" da página HTML.
+        </li>
+        <li>&lt;head&gt;&lt;/head&gt;: O elemento &lt;head&gt; atua como um container para todo o conteúdo da página HTML que não é visível para os visitantes do site. Isso inclui palavras-chave e a descrição da página que você quer que apareça nos resultados de busca, o CSS para estilizar o conteúdo da página (apesar de ser recomendado faze-lo num aquivo separado), declaração de conjunto de caracteres, e etc. Você aprenderá mais sobre isso no próximo artigo da série.</li>
+
+        <li>&lt;meta charset="utf-8"&gt;: Este elemento define o tipo da codificação dos caracteres que o seu documento deve usar, neste caso, para o tipo UTF-8, que inclui a maioria dos caracteres das linguas humanas escritas. Essencialmente, ele consegue lidar com qualquer tipo de conteúdo textual que você puder colocar no documento. Não há motivos para não indicar essa informação e esse elemento ajuda a evitar vários problemas na sua página.</li>
+
+        <li>&lt;title&gt;&lt;/title&gt;: O elemento &lt;title&gt;. Isto define o título de sua página, que aparecerá na guia do navegador na qual a página está carregada e é usado para descrevê-la quando for salva nos favoritos.</li>
+
+        <li>&lt;body&gt;&lt;/body&gt;: O elemento &lt;body&gt; contém todo o conteúdo que você quer mostrar aos usuários quando eles visitarem sua página, como texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis, ou qualquer outra coisa.</li>
+    </ol>
+
+
+       
+        
+
+
+
+
+
+
+
+        <!-- Botão para voltar para blogue -->
+        <div class="voltar">
+            <a href="{{ url_for('blog')}}">Voltar para blogue</a>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
