@@ -31,6 +31,7 @@
       <meta name="twetter:card" content="">
       <meta name="twetter:title" content="Site de tecnologia">
       <meta name="twetter:description" content="Soluções e conteúdos do mundo de tecnologia">
+      <!-- links de css -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
@@ -121,14 +122,22 @@
     <footer>
         <p>2NZ<span class="span">tech </span>&copy; todos direitos reservados</p>
         <div class="social-redes">
-            <a href="https://www.facebook.com/josenzinga.baptista"  target="_blank">
+            <a href="https://www.facebook.com/josenzinga.baptista"  target="_blank" rel="noopener noreferrer">
                 <img src="{{ url_for('static', filename='images/facebook_1.webp')}}" alt="Facebook">
             </a>
-            <a href="/https://whatsapp.com/josenzingabaptista" target="_blank">
+            <a href="https://www.whatsapp.com/josenzingabaptista" target="_blank" rel="noopener noreferrer">
                 <img src="{{ url_for('static', filename='images/whatsap_2a.webp')}}" alt="">
             </a>
-            <a href="/https://instagram.com/josenzinga" target="_blank">
+            <a href="https://www.instagram.com/josenzingabaptista" target="_blank" rel="noopener noreferrer">
                 <img src="{{ url_for('static', filename='images/instagram.jpg')}}" alt="Instagram">
+            </a>
+
+            <a href="https://www.github.com/professorbaptista" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='images/github_1.webp') }}" alt="">
+            </a>
+
+            <a href="https://www.linkedin.com/in/josenzingabaptista" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='images/linkein.png') }}" alt="">
             </a>
         </div>
     </footer>

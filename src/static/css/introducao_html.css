@@ -120,10 +120,23 @@
     margin-bottom: 40px;
 }
 
+.caracteres{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 3px solid #fff;
+    margin-top: 30px;
+    margin-bottom: 0;
+    p{
+        font-size: 1.4rem;
+        color: #ffe4c4;
+    }
+}
+
 .caract{
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 400px;
 }
 
  
