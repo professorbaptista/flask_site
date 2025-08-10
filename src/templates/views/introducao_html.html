@@ -171,24 +171,24 @@
     <div class="caracteres">
         <p>Caracteres especiais</p>
         <p>Referências de caracteres especiais</p>
-    </div>
-<div class="exemplo4">
-    <div class="caract">
-        <p><</p>
-        <p>& lt(;)</p>
-    </div>
-    <hr>
-    <div class="caract">
-       <p>></p>
-       <p>& gt;</p>
-    </div>
-    <hr>
-    <div class="caract">
-        <p>" "</p>
-        <p>& quot;</p>
-    </div>
-    <hr>
-    <div class="caract">
+        </div>
+        <div class="exemplo4">
+        <div class="caract">
+            <p><</p>
+            <p>& lt(;)</p>
+        </div>
+        <hr>
+        <div class="caract">
+        <p>></p>
+        <p>& gt;</p>
+        </div>
+        <hr>
+        <div class="caract">
+            <p>" "</p>
+            <p>& quot;</p>
+        </div>
+        <hr>
+        <div class="caract">
         <p>'</p>
         <p>& apos;</p>
     </div>
@@ -213,6 +213,43 @@ Cada linha de código escrita é um degrau a mais rumo ao domínio da tecnologia
 Se este conteúdo despertou a sua curiosidade, continue explorando — o mundo da programação está cheio de oportunidades para quem está disposto a aprender.
 <br><br>
 <strong>Lembre-se:</strong> quem aprende HTML não está apenas criando páginas, está construindo caminhos para o futuro.</p>
+
+<!-- Comentarios dos usuarios -->
+<section>
+         <div class="criar-post"><a href="/blog/novo">Novo comentário</a></div>
+           <!-- <div class="posts-container"> -->
+              {% for post in posts %}
+            <div class="posts-card">
+               
+               <!-- <div class="card"> -->
+                  <h2>Titulo: {{ post[1] }}</h2>
+                  <p>{{ post[3] }}</p>
+                  <p><em>{{ post[2] }}</em></p>
+                  <div class="editar-excluir">
+                     <a href="{{ url_for('editar_post', id=post[0]) }}">Editar</a>
+                     <form action="{{ url_for('excluir_post', id=post[0]) }}" method="POST" style="display:inline;">
+                     <button type="submit" onclick="return confirm('Tem certeza?')">
+                        Excluir
+                     </button>
+                     </form>
+                  </div>
+                 
+                    <div class="ler-mais">
+                     <p>{{ post[2][:150] }}...</p>
+                     <a href="{{ url_for('ver_post', id=post[0]) }}">Ler mais</a>
+                     
+                  </div>
+               <!-- </div> -->
+            </div>
+           
+          
+      
+      {% else %}
+      <p>Nenhum post publicado.</p>
+      {% endfor %}
+      </section>
+
+
 
         <!-- Botão para voltar para blogue -->
         <div class="voltar">

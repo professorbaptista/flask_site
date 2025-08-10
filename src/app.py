@@ -59,6 +59,13 @@ def portfolio():
 @app.route("/blog")
 def blog():
 
+    
+    return render_template('views/blog.html')
+
+# Rota para linkar aos artigos do blogue.
+@app.route('/introducao-html')
+def introducao_html():
+
     conn = database.connectar()
     cursor = conn.cursor()
     cursor.execute("SELECT * FROM blogue ORDER BY data_post DESC")
@@ -67,12 +74,7 @@ def blog():
     print('Posts enviados; ', posts)
     conn.close()
 
-    return render_template('views/blog.html', posts = posts)
-
-# Rota para linkar aos artigos do blogue.
-@app.route('/introducao-html')
-def introducao_html():
-    return render_template('views/introducao_html.html')
+    return render_template('views/introducao_html.html', posts = posts)
 
 # Rota para adicionar post no blog.
 @app.route('/blog/novo', methods=['GET', 'POST'])
@@ -97,7 +99,7 @@ def novo_post():
 
         conn.commit()
         conn.close()
-        return redirect(url_for('blog'))
+        return redirect(url_for('introducao_html'))
     return render_template('views/novo_post.html')
 
 # Rotas editar e excluir posts
@@ -116,7 +118,7 @@ def editar_post(id):
         conn.commit()
         conn.close()
         flash('Post atualizado com sucesso!')
-        return redirect(url_for('blog'))
+        return redirect(url_for('introducao_html'))
     
     # Busca dados no banco
     cursor.execute("SELECT * FROM blogue WHERE id=?", (id,))
@@ -133,7 +135,7 @@ def excluir_post(id):
     conn.commit()
     conn.close()
     flash('Post excluído com sucesso!')
-    return redirect(url_for('blog'))
+    return redirect(url_for('introducao_html'))
 
 # Rota para ver posts
 @app.route('/ver-post/<int:id>')

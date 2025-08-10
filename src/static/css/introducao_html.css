@@ -137,6 +137,7 @@
     display: flex;
     align-items: center;
     gap: 400px;
+    margin-left: 5%;
 }
 
  
@@ -175,6 +176,20 @@
         .exemplo1, .exemplo2, .exemplo3{
             width: 90%;
         }
+    .caracteres p{
+        font-size: 1rem;
+    }
+
+    .caract{
+    display: flex;
+    align-items: center;
+    gap: 70%;
+    }
+    }
+
+    footer{
+        position: absolute;
+        margin-top: 100%;
     }
 }
 
