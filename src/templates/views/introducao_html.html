@@ -133,11 +133,11 @@
 
          <p>Já vimos os conceitos básicos dos elementos HTML de forma individual, porém, eles não são muito úteis sozinhos. Vamos aprender como estes elementos individuais são combinados entre si para criar uma página HTML inteira:</p>
          <p>Estrutura de uma página Html.</p>
-    <div class="img2">
+        <div class="img2">
         <img src="{{ url_for('static', filename='images/htmlpage.png')}}" alt="Página básica de Html">
-    </div>
-    <p>O código que acabamos de ver, estrutura uma página web. <br> O código é dividido em várias partes fundamentais. Vamos, então explicar cada uma destas partes.</p>
-    <ol>
+        </div>
+        <p>O código que acabamos de ver, estrutura uma página web. <br> O código é dividido em várias partes fundamentais. Vamos, então explicar cada uma destas partes.</p>
+        <ol>
         <li> &lt;!DOCTYPE html&gt; é a menor cadeia de caracteres que conta como um doctype válido; ou seja, determina o tipo de documento pretendido, no caso documento Html.</li>
 
         <li>&lt;html&gt;...&lt;/html&gt;: O elemento &lt;html&gt; envolve ou aninha o conteúdo da página inteira, lembra-se quando falamos de aninhamento de elementos, pois é, todos elementos Html são aninháveis, começando pela tag Html, conhecido como o "elemento raiz" da página HTML.
@@ -149,26 +149,26 @@
         <li>&lt;title&gt;&lt;/title&gt;: O elemento &lt;title&gt;. Isto define o título de sua página, que aparecerá na guia do navegador na qual a página está carregada e é usado para descrevê-la quando for salva nos favoritos.</li>
 
         <li>&lt;body&gt;&lt;/body&gt;: O elemento &lt;body&gt; contém todo o conteúdo que você quer mostrar aos usuários quando eles visitarem sua página, como texto, imagens, vídeos, jogos, faixas de áudio reproduzíveis, ou qualquer outra coisa.</li>
-    </ol>
+        </ol>
 
-    <h2>Relação entre elementos Html</h2>
+        <h2>Relação entre elementos Html</h2>
 
-    <p>importa referir que as relações existentes entre os elementos Html são relações de parentesco. <br> Como já tivemos a oportunidade de ver, anteriormente, que o elemento &lt;html&gt; é chamado de &quot;raiz da página&quot; porque ele abraça todos os demais elementos que fazem parte da estrutura básica da página. Por isso é, também, chamado de pai. E todos os elementos nele contido são filhos deste.</p>
-    <p>Por exemplo, o elemento &lt;head&gt; e o &lt;body&gt; são filhos (childreen em inglês) de &lt;html&gt; e &lt;head&gt; e &lt;body&gt; são irmãos (sibling em inglês), por sua vez, o elemento &lt;head&gt; tem como filhos o &lt;meta&gt;, &lt;title&gt;, &lt;link&gt; e o &lt;script&gt;. E estes são irmãos entre si.</p>
-    <p>O elemento &lt;body&gt;&lt;/body&gt; possuí três filhos, o &lt;h1&gt;, &lt;h2&gt; e o elemento &lt;p&gt;. E as tags &lt;h1&gt;, &lt;h2&gt; e o elemento &lt;p&gt; são irmãos entre si. <br> No entanto, o elemento &lt;h1&gt; tem como filho o texto: &quot;Titulo principal&quot;, e assim por diante.</p>
+        <p>importa referir que as relações existentes entre os elementos Html são relações de parentesco. <br> Como já tivemos a oportunidade de ver, anteriormente, que o elemento &lt;html&gt; é chamado de &quot;raiz da página&quot; porque ele abraça todos os demais elementos que fazem parte da estrutura básica da página. Por isso é, também, chamado de pai. E todos os elementos nele contido são filhos deste.</p>
+        <p>Por exemplo, o elemento &lt;head&gt; e o &lt;body&gt; são filhos (childreen em inglês) de &lt;html&gt; e &lt;head&gt; e &lt;body&gt; são irmãos (sibling em inglês), por sua vez, o elemento &lt;head&gt; tem como filhos o &lt;meta&gt;, &lt;title&gt;, &lt;link&gt; e o &lt;script&gt;. E estes são irmãos entre si.</p>
+        <p>O elemento &lt;body&gt;&lt;/body&gt; possuí três filhos, o &lt;h1&gt;, &lt;h2&gt; e o elemento &lt;p&gt;. E as tags &lt;h1&gt;, &lt;h2&gt; e o elemento &lt;p&gt; são irmãos entre si. <br> No entanto, o elemento &lt;h1&gt; tem como filho o texto: &quot;Titulo principal&quot;, e assim por diante.</p>
 
-    <p>É importante ter um conhecimento razoável sobre o grau parentesco entre os elementos html, pois ajuda-nos na hora de estilização dos mesmos.</p>
+        <p>É importante ter um conhecimento razoável sobre o grau parentesco entre os elementos html, pois ajuda-nos na hora de estilização dos mesmos.</p>
 
-    <h2>Comentários em Html</h2>
-    <p>Muitas vezes, torna-se necessário, fazer anotações no nosso código que não queremos que apareça na nossa página. É para isso que servem os comentários. Por exemplo, o conteúdo que está presente na figura da página básica de html, não aparecerá caso esta seja exibida, porque o navegador ignora todo conteúdo que se encontre dentro dos seguintes carácteres especiais &lt;-- ... --&gt. Por exemplo:</p>
-    <div class="exemplo2">&lt;!-- &lt;p&gt; Este conteúdo não aparecerá na página &lt;/p&gt; --&gt;</div>
+        <h2>Comentários em Html</h2>
+        <p>Muitas vezes, torna-se necessário, fazer anotações no nosso código que não queremos que apareça na nossa página. É para isso que servem os comentários. Por exemplo, o conteúdo que está presente na figura da página básica de html, não aparecerá caso esta seja exibida, porque o navegador ignora todo conteúdo que se encontre dentro dos seguintes carácteres especiais &lt;-- ... --&gt. Por exemplo:</p>
+        <div class="exemplo2">&lt;!-- &lt;p&gt; Este conteúdo não aparecerá na página &lt;/p&gt; --&gt;</div>
 
-    <h2>Carácteres especiais em Html</h2>
+        <h2>Carácteres especiais em Html</h2>
 
-    <p>Em HTML, carácteres como <, >,",' e o & são considerados carácteres especiais. Porque eles fazem parte da própria sintaxe HTML; portanto, como você inclui um desses carácteres no seu texto? Por exemplo, se você realmente deseja escrever um e comercial (&) ou sinal de menor que (<), e não quer que ele seja interpretado como código. Seria importante fazer o uso dos caracteres especiais.</p>
-    <p>Na tabela abaixo temos as entidades de referências e os códigos que representa cada um dos caracteres acima referenciado.</p>
+        <p>Em HTML, carácteres como <, >,",' e o & são considerados carácteres especiais. Porque eles fazem parte da própria sintaxe HTML; portanto, como você inclui um desses carácteres no seu texto? Por exemplo, se você realmente deseja escrever um e comercial (&) ou sinal de menor que (<), e não quer que ele seja interpretado como código. Seria importante fazer o uso dos caracteres especiais.</p>
+        <p>Na tabela abaixo temos as entidades de referências e os códigos que representa cada um dos caracteres acima referenciado.</p>
     
-    <div class="caracteres">
+        <div class="caracteres">
         <p>Caracteres especiais</p>
         <p>Referências de caracteres especiais</p>
         </div>
@@ -191,31 +191,31 @@
         <div class="caract">
         <p>'</p>
         <p>& apos;</p>
-    </div>
-    <hr>
-    <div class="caract">
+        </div>
+        <hr>
+        <div class="caract">
         <p>&</p>
         <p>& amp;</p>
-    </div>
-    <hr>
-</div>
-<p>Nota: as referências de caracteres especiais não deve conter espaços entre eles.</p>
+        </div>
+        <hr>
+        </div>
+        <p>Nota: as referências de caracteres especiais não deve conter espaços entre eles.</p>
 
-<h2>Conclusão</h2>
-<p>
-O HTML é o primeiro passo na jornada de qualquer desenvolvedor front-end. 
-Ele é a base sobre a qual todo o restante da web é construído, e dominar seus fundamentos é abrir as portas para um universo de possibilidades.
-<br>
-Neste artigo, vimos conceitos iniciais para que você dê os primeiros passos com segurança. 
-Agora, o próximo passo é colocar a mão na massa: pratique, experimente e não tenha medo de errar.
-<br>
-Cada linha de código escrita é um degrau a mais rumo ao domínio da tecnologia. 
-Se este conteúdo despertou a sua curiosidade, continue explorando — o mundo da programação está cheio de oportunidades para quem está disposto a aprender.
-<br><br>
-<strong>Lembre-se:</strong> quem aprende HTML não está apenas criando páginas, está construindo caminhos para o futuro.</p>
-<br><br>
-<!-- Comentarios dos usuarios -->
-<section>
+        <h2>Conclusão</h2>
+        <p>
+        O HTML é o primeiro passo na jornada de qualquer desenvolvedor front-end. 
+        Ele é a base sobre a qual todo o restante da web é construído, e dominar seus fundamentos é abrir as portas para um universo de possibilidades.
+        <br>
+        Neste artigo, vimos conceitos iniciais para que você dê os primeiros passos com segurança. 
+        Agora, o próximo passo é colocar a mão na massa: pratique, experimente e não tenha medo de errar.
+        <br>
+        Cada linha de código escrita é um degrau a mais rumo ao domínio da tecnologia. 
+        Se este conteúdo despertou a sua curiosidade, continue explorando — o mundo da programação está cheio de oportunidades para quem está disposto a aprender.
+        <br><br>
+        <strong>Lembre-se:</strong> quem aprende HTML não está apenas criando páginas, está construindo caminhos para o futuro.</p>
+        <br><br>
+        <!-- Comentarios dos usuarios -->
+        
          <div class="criar-post"><a href="/blog/novo">Novo comentário</a></div>
            <!-- <div class="posts-container"> -->
               {% for post in posts %}
@@ -247,7 +247,7 @@ Se este conteúdo despertou a sua curiosidade, continue explorando — o mundo d
       {% else %}
       <p>Nenhum comentário do momento.</p>
       {% endfor %}
-      </section>
+     
 
 
 
